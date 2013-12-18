@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Solr</title>
+  <link rel="stylesheet" href="css/reuters.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/smoothness/jquery-ui.css">
+  <script src="js/reuters.js"></script>
+  <script src="../../core/Core.js"></script>
+  <script src="../../core/AbstractManager.js"></script>
+  <script src="../../managers/Manager.jquery.js"></script>
+  <script src="../../core/Parameter.js"></script>
+  <script src="../../core/ParameterStore.js"></script>
+  <script src="../../core/AbstractWidget.js"></script>
+  <script src="widgets/ResultWidget.js"></script>
+  <script src="../../widgets/jquery/PagerWidget.js"></script>
+  <script src="../../core/AbstractFacetWidget.js"></script>
+  <script src="widgets/TagcloudWidget.js"></script>
+  
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="widgets/BubbleChartWidget.js"></script>
+  
+  <script src="widgets/CurrentSearchWidget.9.js"></script>
+  <script src="../../core/AbstractTextWidget.js"></script>
+  <script src="widgets/AutocompleteWidget.js"></script>
+  <script src="widgets/CountryCodeWidget.js"></script>
+  <script src="widgets/CalendarWidget.js"></script>
+</head>
+<body>				
+				<style>
+
+				body {
+				  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				  margin: auto;
+				  position: relative;
+				  width: 960px;
+				  height: 500px;
+				}
+				
+				#treemap_topics {
+				.body;
+				}
+				#treemap_exchanges {
+				.body;
+				}
+
+				form {
+				  position: relative;
+				  right: 10px;
+				  top: 10px;
+				}
+
+				.node {
+				  border: solid 1px white;
+				  font: 10px sans-serif;
+				  line-height: 12px;
+				  overflow: hidden;
+				  position: absolute;
+				  text-indent: 2px;
+				}
+
+				</style>
+				
+
+
+	  <h2>Bubbles</h2>
+		  <div id="bubbles_topics">
+				
+		  </div>
+
+		  
+		  
+		
+				
+	<!--
+
+      <h2>By Country</h2>
+      <div id="countries"></div>
+      <div id="preview"></div>
+
+      <h2>By Date</h2>
+      <div id="calendar"></div>
+
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>  
+-->
+
+</body>
+</html>
