@@ -23,12 +23,12 @@
 				
 				
 				//see print values
-				/*for(var i=0; i<objectedItems2.length;i++){
-					document.write(objectedItems2[i].name); 
-					document.write(",");
-					document.write(objectedItems2[i].children[0].size);
-					document.write("\n");
-				}*/
+					/*for(var i=0; i<objectedItems2.length;i++){
+						document.write(objectedItems2[i].name); 
+						document.write(",");
+						document.write(objectedItems2[i].children[0].size);
+						document.write("\n");
+					}*/
 				
 				var json1= JSON.stringify(objectedItems2);
 				//document.write(json1);
@@ -38,16 +38,14 @@
 				json2 += '}';
 				//document.write(json2); 
 				
-				
-				
-				var diameter = 960,
-					format = d3.format(",d"),
-					color = d3.scale.category20c();
+				var diameter = this.diameter;
+				var format = d3.format(",d");
+				var color = d3.scale.category20c();
 
 				var bubble = d3.layout.pack()
 					.sort(null)
 					.size([diameter, diameter])
-					.padding(1.5);
+					.padding(this.padding);
 
 				var svg = d3.select(this.target).append("svg")
 					.attr("width", diameter)

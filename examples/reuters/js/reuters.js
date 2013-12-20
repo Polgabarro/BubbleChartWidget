@@ -12,8 +12,21 @@ var Manager;
 							Manager.addWidget(new AjaxSolr.BubbleChartWidget({
 								id: 'bubbles_topics',
 								target: '#' + 'bubbles_topics',
-								field: 'topics'
+								field: 'topics',
+								diameter: 960,
+								padding: 1.5
 							  }));
+							  
+							  
+							  Manager.addWidget(new AjaxSolr.BubbleChartWidget({
+								id: 'bubbles_exchanges',
+								target: '#' + 'bubbles_exchanges',
+								field: 'exchanges',
+								diameter: 960,
+								padding: 1.5
+							  }));
+							
+							
 
 	
 	
