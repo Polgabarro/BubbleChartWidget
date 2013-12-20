@@ -1,7 +1,6 @@
 (function ($) {
         
 	AjaxSolr.BubbleChartWidget = AjaxSolr.AbstractFacetWidget.extend({
-<<<<<<< HEAD
 		
 	
 		afterRequest: function () 
@@ -14,15 +13,6 @@
 				$(this.target).html('no items found in current selection');
 				return;
 			}
-=======
-		afterRequest: function () 
-		{
-	                
-			if (this.manager.response.facet_counts.facet_fields[this.field] === undefined) {
-				$(this.target).html('no items found in current selection');
-				return;
-			}else{
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
 				
 				
 				//objectedItems is my list of facets & counts
@@ -48,28 +38,21 @@
 				var json1= JSON.stringify(objectedItems2);
 				//document.write(json1);
 				
+				//adding root
 				var json2 = '{ "name" : "node" , "children" : ';
 				json2 += json1;
 				json2 += '}';
 				//document.write(json2); 
 				
-<<<<<<< HEAD
 				  diameter = this.diameter;
 				  padding = this.padding;
-=======
-				var diameter = this.diameter;
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
 				var format = d3.format(",d");
 				var color = d3.scale.category20c();
 
 				var bubble = d3.layout.pack()
 					.sort(null)
 					.size([diameter, diameter])
-<<<<<<< HEAD
 					.padding(padding);
-=======
-					.padding(this.padding);
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
 
 				var svg = d3.select(this.target).append("svg")
 					.attr("width", diameter)
@@ -84,18 +67,11 @@
 					.enter().append("g")
 					  .attr("class", "node")
 					  .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-<<<<<<< HEAD
 				
 				  node.append("title")
 					  .text(function(d) { return d.className + ": " + format(d.value); });
 						
 						
-=======
-
-				  node.append("title")
-					  .text(function(d) { return d.className + ": " + format(d.value); });
-
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
 				  node.append("circle")
 					  .attr("r", function(d) { return d.r; })
 					  .style("fill", function(d) { return color(d.packageName); });
@@ -103,12 +79,8 @@
 				  node.append("text")
 					  .attr("dy", ".3em")
 					  .style("text-anchor", "middle")
-<<<<<<< HEAD
 					  .text(function(d) { return d.className.substring(0, d.r / 3); })
 					  .on("click", function(d) { document.write(d.className)});
-=======
-					  .text(function(d) { return d.className.substring(0, d.r / 3); });
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
 				});
 
 				// Returns a flattened hierarchy containing all leaf nodes under the root.
@@ -126,7 +98,6 @@
 
 				d3.select(self.frameElement).style("height", diameter + "px");
 				
-<<<<<<< HEAD
 				//when a tag in the tagcloud is pressed, change the bubbles
 				$(this.id).empty();
 				for (var i = 0, l = objectedItems2.length; i < l; i++) {
@@ -141,11 +112,6 @@
 				
 				
 			
-=======
-				
-
-          		}
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
 		}
 	});
 
