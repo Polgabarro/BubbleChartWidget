@@ -1,7 +1,6 @@
 (function ($) {
         
 	AjaxSolr.BubbleChartWidget = AjaxSolr.AbstractFacetWidget.extend({
-		
 	
 		afterRequest: function () 
 		{
@@ -58,7 +57,8 @@
 					.attr("width", diameter)
 					.attr("height", diameter)
 					.attr("class", "bubble");
-
+				
+				
 				d3.json("", function(error, root) {
 					root=JSON.parse( json2 );
 				  var node = svg.selectAll(".node")
@@ -80,7 +80,8 @@
 					  .attr("dy", ".3em")
 					  .style("text-anchor", "middle")
 					  .text(function(d) { return d.className.substring(0, d.r / 3); })
-					  .on("click", function(d) { document.write(d.className)});
+					  .on("click", function(d) { document.write(d.className)}); //we need to call here the clickHandler(d.className)
+					  
 				});
 
 				// Returns a flattened hierarchy containing all leaf nodes under the root.
@@ -98,22 +99,14 @@
 
 				d3.select(self.frameElement).style("height", diameter + "px");
 				
-				//when a tag in the tagcloud is pressed, change the bubbles
-				$(this.id).empty();
-				for (var i = 0, l = objectedItems2.length; i < l; i++) {
-				  var facet = objectedItems2[i].facet;
-				  $(this.target).append(
-					$('<a href="#" class="tagcloud_item"></a>')
-					.text(facet)
-					.addClass('tagcloud_size_' + parseInt(objectedItems[i].count / maxCount * 10))
-					.click(this.clickHandler(facet))
-				  );
-				}
+				//$(this.target).empty();
 				
 				
 			
 		}
+		
+		
 	});
-
+	
 })(jQuery);
 

@@ -21,7 +21,12 @@ var Manager;
         $('#pager-header').html($('<span></span>').text('displaying ' + Math.min(total, offset + 1) + ' to ' + Math.min(total, offset + perPage) + ' of ' + total));
       }
     }));
-    var fields = [ 'topics', 'organisations', 'exchanges' ];
+    
+	
+	
+	var fields = [ 'topics', 'organisations', 'exchanges' ];
+	
+	
     for (var i = 0, l = fields.length; i < l; i++) {
       Manager.addWidget(new AjaxSolr.TagcloudWidget({
         id: fields[i],
@@ -38,22 +43,7 @@ var Manager;
       target: '#search',
       fields: [ 'topics', 'organisations', 'exchanges' ]
     }));
-    Manager.addWidget(new AjaxSolr.BubbleChartWidget({
-		id: 'bubbles_topics',
-		target: '#' + 'bubbles_topics',
-		field: 'topics',
-		diameter: 300,
-		padding: 1.5
-	  }));
-	  
-	  
-	  Manager.addWidget(new AjaxSolr.BubbleChartWidget({
-		id: 'bubbles_exchanges',
-		target: '#' + 'bubbles_exchanges',
-		field: 'exchanges',
-		diameter: 300,
-		padding: 1.5
-	  }));
+
 	
 	/*Manager.addWidget(new AjaxSolr.CountryCodeWidget({
       id: 'countries',
@@ -67,24 +57,22 @@ var Manager;
     }));*/
 
 	
-    var fields = [ 'topics', 'organisations', 'exchanges' ];
-	
-							Manager.addWidget(new AjaxSolr.BubbleChartWidget({
-								id: 'bubbles_topics',
-								target: '#' + 'bubbles_topics',
-								field: 'topics',
-								diameter: 300,
-								padding: 1.5
-							  }));
-							  
-							  
-							  Manager.addWidget(new AjaxSolr.BubbleChartWidget({
-								id: 'bubbles_exchanges',
-								target: '#' + 'bubbles_exchanges',
-								field: 'exchanges',
-								diameter: 300,
-								padding: 1.5
-							  }));
+	Manager.addWidget(new AjaxSolr.BubbleChartWidget({
+		id: 'bubbles_topics',
+		target: '#' + 'bubbles_topics',
+		field: 'topics',
+		diameter: 382,
+		padding: 1.5
+	  }));
+	  
+	  
+	  /*Manager.addWidget(new AjaxSolr.BubbleChartWidget({
+		id: 'bubbles_exchanges',
+		target: '#' + 'bubbles_exchanges',
+		field: 'exchanges',
+		diameter: 300,
+		padding: 1.5
+	  }));*/
 							
 							
 
