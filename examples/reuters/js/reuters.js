@@ -6,6 +6,7 @@ var Manager;
     Manager = new AjaxSolr.Manager({
       solrUrl: 'http://reuters-demo.tree.ewdev.ca:9090/reuters/'
     });
+<<<<<<< HEAD
     Manager.addWidget(new AjaxSolr.ResultWidget({
       id: 'result',
       target: '#docs'
@@ -64,6 +65,32 @@ var Manager;
       target: '#calendar',
       field: 'date'
     }));*/
+=======
+	
+    var fields = [ 'topics', 'organisations', 'exchanges' ];
+	
+							Manager.addWidget(new AjaxSolr.BubbleChartWidget({
+								id: 'bubbles_topics',
+								target: '#' + 'bubbles_topics',
+								field: 'topics',
+								diameter: 960,
+								padding: 1.5
+							  }));
+							  
+							  
+							  Manager.addWidget(new AjaxSolr.BubbleChartWidget({
+								id: 'bubbles_exchanges',
+								target: '#' + 'bubbles_exchanges',
+								field: 'exchanges',
+								diameter: 960,
+								padding: 1.5
+							  }));
+							
+							
+
+	
+	
+>>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
     Manager.init();
     Manager.store.addByValue('q', '*:*');
     var params = {
