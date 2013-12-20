@@ -1,5 +1,4 @@
 # BubbleChartWidget
-# BubbleChartWidget
 
 BubbleChartWidget is a widget implemented in .js which is implemented using AbstractFacetWidget structure and uses facets taken from the m AJAX Solr.
 This witget uses the d3.js library to represent its data. 
