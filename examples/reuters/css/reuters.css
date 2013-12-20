@@ -114,7 +114,7 @@ a:hover {
 #search_help {
   font-size: 80%;
 }
-<<<<<<< HEAD
+
 .tagcloud {
   padding: 10px 15px 0;
 }
@@ -163,8 +163,7 @@ font-size: 170%;
 a.tagcloud_size_10 {
 font-size: 180%;
 }
-=======
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
+
 
 /* BUBBLECHART NODE */
 .node {
@@ -174,8 +173,8 @@ font-size: 180%;
   overflow: hidden;
   position: absolute;
   text-indent: 2px;
-<<<<<<< HEAD
+
 }
-=======
+
 }
->>>>>>> 8268e81d32db6df8023922d6f28f2756e9d7d2c9
+
