@@ -1,9 +1,9 @@
 (function ($) {
         
 	AjaxSolr.BubbleChartWidget = AjaxSolr.AbstractFacetWidget.extend({
-	
 		afterRequest: function () 
 		{
+            $(this.target).empty();
 			//default values
 	        var diameter = 960;
 			var padding = 1.5;
