@@ -7,6 +7,7 @@
 			//default values
 	        var diameter = 960;
 			var padding = 1.5;
+			var env = this;
 			
 			if (this.manager.response.facet_counts.facet_fields[this.field] === undefined) {
 				$(this.target).html('no items found in current selection');
@@ -80,7 +81,11 @@
 					  .attr("dy", ".3em")
 					  .style("text-anchor", "middle")
 					  .text(function(d) { return d.className.substring(0, d.r / 3); })
-					  .on("click", function(d) { document.write(d.className)}); //we need to call here the clickHandler(d.className)
+					  .on("click", function(d) { //clickhandler function
+						  var self = env, meth = env.multivalue ? 'add' : 'set';			
+							self[meth].call(self, d.className);
+							self.doRequest();
+					   }); 
 					  
 				});
 
